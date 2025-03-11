@@ -1,14 +1,10 @@
 import React from 'react';
+import MainBackground from './components/MainBackground.jsx';
 
-const MainBackground = () => {
+const App = () => {
   return (
-  <div className="main-background">
-  <div className="pattern-lines"></div>
-  <div className="pattern-circle"></div>
-   <div className="pattern-circle-second"></div>
-  </div>
-
+    <MainBackground/>
   );
 };
 
-export default MainBackground;
+export default App;

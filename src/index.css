@@ -16,8 +16,8 @@ body {
 
 
 .main-background {
-  width: 100vw;
-  height: 100vh;
+  width: 1440px;
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,17 +71,59 @@ body {
   font-size: 15px;
 }
 
+
+.input-field{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  color: white;
+  font-size: 15px;
+  z-index: 5;
+}
+
 .field-to-dropfile {
   width: 350px;
   height: 100px;
-  border: 1.5px dashed white;  /* เปลี่ยนเป็นเส้นปะ */
-  border-radius: 15px;  /* มุมโค้ง */
+  border: 1.5px dashed white; /* เปลี่ยนเป็นเส้นปะ */
+  border-radius: 15px; /* มุมโค้ง */
   margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  cursor: pointer;
 }
 
+.field-to-dropfile:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+
+}
+
+.transparent-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.transparent-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.upload-text {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+}
 .button-to-upload-avatar {
   padding: 5px;
   background-color: hsl(0, 0%, 100%);
@@ -100,8 +142,73 @@ body {
   width: 20px;
   z-index: 2; 
   background-color: hsl(0, 0%, 100%) ;
-
+  cursor: pointer; 
 }
+
+.recomment-size-upload{
+  font-size: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.full-name {
+  width: 350px;
+  height: 50px;
+  border: 1px solid white; 
+  background-color: transparent; 
+  display: flex;
+  align-items: center;
+  padding: 0 10px; 
+  border-radius: 8px;
+  margin-top: 10px;
+  color: white;
+}
+
+.input-full-name {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none; 
+  outline: none; 
+  color: white; 
+  font-size: 16px;
+}
+
+.input-full-name::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* ทำให้ placeholder ดูจางลง */
+}
+
+.button-generate{
+  width: 350px;
+  height: 50px;
+  margin-top: 30px;
+  border-radius: 8px;
+  border: 0px solid transparent;
+  cursor: pointer;
+  z-index: 6;
+  background-color: hsl(7, 88%, 67%);
+  transition: background-color 0.3s ease; 
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.button-generate:hover {
+  background-color: hsl(7, 71%, 60%);
+}
+
+.image-container {
+  width: 20px; /* หรือขนาดที่ต้องการ */
+  height: 20px;
+  overflow: hidden; /* ป้องกันรูปเกินขอบ */
+  border-radius: 5px; /* ปรับตามต้องการ */
+}
+
+.uploaded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 
 
@@ -145,6 +252,16 @@ body {
     width: 15.2%;
     height: 218px;
     z-index: 1; 
+}
+
+.pattern-squiggly-line-bottom-desktop{
+    background-image: url('./assets/pattern-squiggly-line-bottom-desktop.svg');
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 800px;
+    height: 400px;
+    z-index: 2; 
 }
 
 

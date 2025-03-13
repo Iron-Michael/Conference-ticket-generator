@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import logo from '../assets/logo-mark.svg';
 import iconUpload from '../assets/icon-upload.svg'
 import iconInfo from '../assets/icon-info.svg'
-
+import { useNavigate } from "react-router-dom";
 
 const MainBackground = () => {
 
-
+  const navigate = useNavigate();
   const [fullName,setFullName]=useState("")
 
   const [email, setEmail] = useState("");
@@ -69,7 +69,14 @@ const MainBackground = () => {
   };
 
 
+  const handleSubmit = () => {
+    if (!fullName || !email || !file || !githubUser) {
+      alert("Please fill all fields");
+      return;
+    }
 
+    navigate("/ticket", { state: { fullName, email, file ,githubUser} });
+  };
 
   return  (
     <div className="main-background">
@@ -156,7 +163,7 @@ const MainBackground = () => {
 
 
       <label style={{marginTop:"30px"}}>Email Address</label>
-      <div className='input-field'>
+
       <input
         className="full-name"
         type="email"
@@ -170,7 +177,7 @@ const MainBackground = () => {
           <p style={{ color: "red" }}>Please enter a valid email</p>
         </div>
       )}
-    </div>
+ 
 
 
       <label style={{marginTop:"20px"}}>Github User</label>
@@ -179,7 +186,7 @@ const MainBackground = () => {
       </div>
       </div>
 
-      <button className='button-generate'>
+      <button className='button-generate' onClick={()=>handleSubmit()}>
           Generate My Ticket
       </button>
 

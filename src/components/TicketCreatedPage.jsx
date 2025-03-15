@@ -54,13 +54,13 @@ const TicketCreatedPage = () => {
             <label>We've emailed your ticket to {emailCurrent} and will send updates in the run up to the event.</label>
           </div>
 
-            <div  className='ticket-space'>
+          <div  className='ticket-space'>
           <img
             src={patternTicket}
             className='img-ticket'
           >
           </img>
-            <div className="logo-of-ticket"><img src={logo}></img></div>
+            <div className="logo-of-ticket"><img style={{width:"20px"}} src={logo}></img></div>
             <div className="name-of-ticket">Coding of Greatness</div>
             <div className="date-of-ticket">{formattedDate} / {cityTicket} </div>
             <div className="image-of-ticket">
@@ -71,10 +71,11 @@ const TicketCreatedPage = () => {
             />
             <div className='owner-ticket'> <label>{fullName}</label></div>
             <div className='github-owner-ticket'><img src={iconGithub} style={{marginRight:"10px"}} ></img><label>{githubUser}</label></div>
+            
             </div>
-
-
             <div className='num-ticket'>#546454</div> 
+
+        
           </div>
     
        
